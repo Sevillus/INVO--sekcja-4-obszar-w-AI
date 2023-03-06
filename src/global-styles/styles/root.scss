@@ -1,0 +1,37 @@
+/// Root Styles file
+/// Here we define all the root variables we need for our project.
+/// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
+
+:root {
+
+    --color-primary: #FFFFFF;
+    --color-on-surface: #000;
+
+
+}
+
+
+.home-page{
+    --home-page-size: 1136px 511px;
+    --home-page-margin:20vh 10.5vw 15vh 10.5vw;
+    --home-page-flex-direction: row;
+    --home-page-gap:0;
+    &_info-box{
+        --info-gap: 24px;
+        --info-box-width: 467px;
+        --info-box-height: 232px;
+    }
+    &_box-container{
+        --grid-gap: 31px 24px;
+    }
+    &_box{
+        --box-width: 268px;
+        --box-height: 240px;
+        --box-radius: 24px;
+        --box-p-size: 16px;
+        --box-p-margin:0 16px 24px 16px;
+        --box-content-margin-top:24px;
+        --box-bg-color: #272D42;
+        --icon-bg-size: 64px;
+    }
+}

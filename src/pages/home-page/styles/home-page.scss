@@ -1,0 +1,144 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+
+.home-page{
+  size: var(--home-page-size);
+  margin: var(--home-page-margin);
+  display: flex;
+  flex-direction: var(--home-page-flex-direction);
+  justify-content: space-between;
+  gap: var( --home-page-gap);
+  align-items: flex-start;
+
+  &_info-box{
+    display: flex;
+    flex-direction: column;
+    width: var(--info-box-width);
+    height: var(--info-box-height);
+    gap: var(--info-gap);
+  }
+  &_box-container{
+    grid-gap: var(--grid-gap);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &_box{
+    border-radius: var(--box-radius);
+    background: var(--box-bg-color);
+    width: var(--box-width);
+
+    p{
+      font-size: var(--box-p-size);
+      margin: var(--box-p-margin);
+      opacity: 0.5;
+
+    }
+  }
+  &_box-content{
+    margin-top: var(--box-content-margin-top);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+
+  }
+  &_box-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%;
+    width: var(--icon-bg-size);
+    height: var(--icon-bg-size);
+    img{
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  /*Background colors of each box's icon*/
+  #sphere{
+    background:#373155;
+  }
+  #vr-user{
+    background:#2C3455;
+  }
+  #tech-circle{
+    background:#274255;
+  }
+  #ai-chip{
+    background:#3D413F;
+  }
+
+}
+@media (max-width: 1300px) {
+  .home-page{
+    --home-page-margin:20vh 5vw 10vh 5vw;
+    &_box{
+      --box-width: 22vw;
+      --box-p-size: 14px;
+      --icon-bg-size: 50px;
+    }
+  }
+}
+//tablet
+@media  (max-width: 991.8px) {
+  .home-page{
+    --home-page-size: 59.47vw 58.63vh;
+    --home-page-margin: 20.65vh 20.26vw 21.94vh 20.26vw;
+    --home-page-flex-direction: column;
+    --home-page-gap:24px;
+    &_info-box{
+      --info-gap: 16px;
+      --info-box-width: 100%;
+      --info-box-height: 224px;
+    }
+    &_box-container{
+      --grid-gap: 16px;
+    }
+    &_box{
+      --icon-bg-size: 56px;
+      --box-width: 28.78vw;
+      --box-height: auto;
+      --box-radius: 20px;
+      --box-p-size: 14px;
+      --box-content-margin-top:20px;
+      --box-p-margin:0 17px 16px 14px;
+    }
+  }
+
+}
+
+@media (max-width: 776.98px) {
+  h1{
+    font-size: 38px;
+  }
+}
+//mobile
+@media (max-width: 640px) {
+  .home-page_box-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  h1{
+    font-size: 32px;
+  }
+  .home-page{
+    --home-page-size: 343px 100%;
+    --home-page-margin: 53px 16px 0 16px;
+    --home-page-gap:10px;
+    &_box{
+      --box-width: 100%;
+      --box-p-margin:0 20px 20px 20px;
+    }
+  }
+
+}
+@media (max-width: 340px) {
+  h1{
+    font-size: 28px;
+  }
+  .home-page{
+    --home-page-gap:60px;
+  }
+}
+
